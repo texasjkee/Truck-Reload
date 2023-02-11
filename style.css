@@ -1,0 +1,12 @@
+.truck_extention {
+  position: fixed;
+  top: 9px;  
+  left: 700px;
+  z-index: 1000;
+  font-size: 20px;
+  color: red;
+}
+
+.hide {
+  display: none;
+}

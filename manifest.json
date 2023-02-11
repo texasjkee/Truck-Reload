@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "truckReload",
+  "version": "0.1.0",
+  "content_scripts": [
+    {
+      "matches":["https://truckersedge.dat.com/*"],
+      "js": ["script.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "permissions": ["storage"]
+}
