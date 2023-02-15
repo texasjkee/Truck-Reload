@@ -1,7 +1,13 @@
 {
-  "manifest_version": 3,
   "name": "truckReload",
+  "manifest_version": 3,
   "version": "0.1.0",
+  "description": "Reload truckersedge search",
+  "icons": {
+    "38": "./images/reload38.png",
+    "48": "./images/reload48.png",
+    "128": "./images/reload128.png"
+  },
   "content_scripts": [
     {
       "matches":["https://truckersedge.dat.com/*"],
