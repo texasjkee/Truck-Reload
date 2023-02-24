@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "Reload truckersedge search",
   "icons": {
-    "48": "./images/logo_48.png"
+    "48": "./images/icon128.png"
   },
   "content_scripts": [
     {
