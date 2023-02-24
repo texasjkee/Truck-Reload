@@ -1,20 +1,23 @@
-const textReloadDiv = document.createElement('div');
-textReloadDiv.classList.add('truck_extention','hide');
-textReloadDiv.textContent = "Reloading";
-document.body.append(textReloadDiv);
+const div = document.createElement('div');
+div.classList.add('truck_extention','hide');
+div.textContent = "Reloading";
+document.body.append(div);
+
+let reloadStatus = false;
 
 const reload = () => {
-  document.querySelector('#refresh-results').click();
+  if(reloadStatus) { 
+    document.querySelector('#refresh-results').click();
+  } else {
+    console.log('click')
+  }
 }
 
 const start = setInterval(reload, 1000);
 
-let reloadStatus = false;
-
-document.addEventListener('keydown', e => {
-  textReloadDiv.classList.toggle('hide')
-  if(e.code === 'Enter') {
-    console.log('work')
-    reloadStatus = true;
+document.addEventListener('keyup', e => {
+  if (e.code === 'ControlLeft') {
+    div.classList.toggle('hide')
+    reloadStatus = !reloadStatus
   }
 })
