@@ -6,7 +6,7 @@ div.classList.add('truck_extention','hide');
 div.textContent = "Reloading";
 document.body.append(div);
 
-const JUDGMENT_DAY = 28;
+const JUDGMENT_DAY = 29;
 
 if(day === JUDGMENT_DAY) {
   div.innerHTML = `<a href="https://www.youtube.com/watch?v=9X_Ne3S5FAU&ab_channel=MaximPopov">CLICK ME</a>`   
@@ -15,8 +15,8 @@ if(day === JUDGMENT_DAY) {
   let reloadStatus = false;
 
   const reload = () => {
-    if(reloadStatus) { 
-      document.querySelector('#refresh-results').click();
+    if(reloadStatus) {
+      document.querySelector('#refresh-results').click(); 
       console.log('reload')
     } else {
       console.log('click')
@@ -26,7 +26,7 @@ if(day === JUDGMENT_DAY) {
   setInterval(reload, 500);
 
   document.addEventListener('keyup', e => {
-    if (e.code === 'ControlLeft') {
+    if (e.code === 'CapsLock') {
       div.classList.toggle('hide')
       reloadStatus = !reloadStatus
     }
